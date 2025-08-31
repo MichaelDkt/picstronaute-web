@@ -1,0 +1,12 @@
+.main-footer {
+  background: linear-gradient(180deg, #7500FF 0%, #211134 100%);
+  color: var(--picstronaute-white);
+  padding: 20px;
+  text-align: center;
+}
+
+.main-footer a {
+  color: var(--picstronaute-green);
+  text-decoration: none;
+  font-weight: bold;
+}

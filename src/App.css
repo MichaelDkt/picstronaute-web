@@ -1,0 +1,209 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --picstronaute-purple: #4b0082;
+  --picstronaute-green: #2ecc71;
+  --picstronaute-white: #ffffff;
+  --picstronaute-grey: #f4f4f4;
+  --picstronaute-text-color: #333;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--picstronaute-text-color);
+  background-color: var(--picstronaute-white);
+  line-height: 1.6;
+}
+
+/* Conteneur principal */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Conteneur du contenu */
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Styles des sections */
+section {
+  padding: 60px 20px;
+}
+
+/* Style de l'en-tête (Header) */
+.main-header {
+  background-color: var(--picstronaute-purple);
+  color: var(--picstronaute-white);
+  padding: 20px;
+  text-align: center;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-header nav a {
+  color: var(--picstronaute-white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.main-header nav a:hover {
+  color: var(--picstronaute-green);
+}
+
+/* Style de la section "Héros" */
+.hero-section {
+  background-color: var(--picstronaute-white);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+  color: var(--picstronaute-purple);
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--picstronaute-text-color);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.cta-button {
+  background-color: var(--picstronaute-green);
+  color: var(--picstronaute-white);
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #27ae60;
+}
+
+/* Style de la section des fonctionnalités */
+.features-section {
+  background-color: var(--picstronaute-grey);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section h3 {
+  font-size: 2rem;
+  color: var(--picstronaute-purple);
+  margin-bottom: 40px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.feature-item h4 {
+  font-size: 1.5rem;
+  color: var(--picstronaute-green);
+}
+
+/* Style du pied de page */
+.main-footer {
+  background-color: var(--picstronaute-purple);
+  color: var(--picstronaute-white);
+  padding: 20px;
+  text-align: center;
+}
+
+.main-footer a {
+  color: var(--picstronaute-green);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style de la section Instagram */
+.instagram-section {
+  padding: 60px 20px;
+}
+
+.instagram-section h3 {
+  font-size: 2rem;
+  color: var(--picstronaute-purple);
+  margin-bottom: 40px;
+}
+
+.instagram-feed-container {
+  width: 100%;
+}
+
+.instagram-feed-container iframe {
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  height: 600px; /* Ajustez la hauteur au besoin */
+}
+
+/* MEDIA QUERIES POUR MOBILE */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .main-header h1 {
+    margin-bottom: 10px;
+  }
+  
+  .main-header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .features-container {
+    flex-direction: column;
+  }
+
+  .instagram-feed-container iframe {
+    height: 400px; /* Réduisez la hauteur pour mobile */
+  }
+}

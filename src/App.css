@@ -77,22 +77,49 @@ section {
 
 /* Style de la section "Héros" */
 .hero-section {
-  background-color: var(--picstronaute-white);
   padding: 100px 20px;
   text-align: center;
+  background-image: url("/images/fondHP.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-section h2 {
   font-size: 3rem;
-  color: var(--picstronaute-purple);
   margin-bottom: 10px;
 }
 
 .hero-section p {
   font-size: 1.2rem;
-  color: var(--picstronaute-text-color);
   max-width: 600px;
   margin: 0 auto 30px;
+}
+
+/* Styles des colonnes du héros */
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text-column {
+  flex: 0.6;
+  color: #ffffff;
+  background-color: rgba(117, 0, 255, 0.50);  
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.hero-image-column {
+  flex: 0.4;
+}
+
+.hero-image {
+  max-width: 200px;
+  height: auto;
 }
 
 .cta-button {
@@ -135,6 +162,10 @@ section {
   flex: 1 1 250px;
   max-width: 300px;
   margin: 20px auto;
+  padding: 40px;
+  background-color: #7500FF;
+  color: #ffffff;
+  border-radius: 20px;
 }
 
 .feature-item h4 {
@@ -175,7 +206,7 @@ section {
   width: 100%;
   border: none;
   overflow: hidden;
-  height: 600px; /* Ajustez la hauteur au besoin */
+  height: 800px;
 }
 
 /* MEDIA QUERIES POUR MOBILE */
@@ -195,15 +226,23 @@ section {
     gap: 10px;
   }
   
+  .hero-section {
+    padding: 60px 20px;
+  }
+  
   .hero-section h2 {
     font-size: 2rem;
   }
-
+  
+  .hero-content {
+    flex-direction: column;
+  }
+  
   .features-container {
     flex-direction: column;
   }
 
   .instagram-feed-container iframe {
-    height: 400px; /* Réduisez la hauteur pour mobile */
+    height: 400px;
   }
 }

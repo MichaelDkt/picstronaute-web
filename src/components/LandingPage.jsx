@@ -1,5 +1,5 @@
 import React from 'react';
-import InstagramFeed from './InstagramFeed'; // Importez le composant du flux Instagram
+import InstagramFeed from './InstagramFeed';
 
 function LandingPage() {
   return (
@@ -7,17 +7,14 @@ function LandingPage() {
       {/* Section "Héros" */}
       <section 
         className="hero-section"
-        style={{
-          backgroundImage: 'url("/images/hero-bg.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          textAlign: 'center',
-          padding: '100px 20px',
-        }}
       >
-        <h2>L'Appli qui fait de vos photos de vraies aventures.</h2>
-        <p>Des défis créatifs pour bouger, explorer et capturer le monde autrement.</p>
-        <button className="cta-button">Rejoindre l'aventure</button>
+        <div className="hero-content">
+          <div className="hero-text-column">
+            <h2>L'Appli qui fait de vos photos de vraies aventures.</h2>
+            <p>Des défis créatifs pour bouger, explorer et capturer le monde autrement.</p>
+            <button className="cta-button">Rejoindre l'aventure</button>
+          </div>
+        </div>
       </section>
 
       {/* Section "Le concept" (id="concept") */}

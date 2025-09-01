@@ -1,19 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, query, where, getDocs, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, collection, setDoc, doc } from 'firebase/firestore'; // Importez 'doc' et 'setDoc'
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import './EmailForm.css';
-
-// Votre configuration Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyCvhDJUU3IFZ_ZCkS6_YTE7CYRugSvwnJ0",
-  authDomain: "picstronaute-email-base.firebaseapp.com",
-  projectId: "picstronaute-email-base",
-  storageBucket: "picstronaute-email-base.firebasestorage.app",
-  messagingSenderId: "705721731833",
-  appId: "1:705721731833:web:b991d936eb98c98f31f028",
-  measurementId: "G-ZLDKNNR6JG"
-};
 
 // Variables globales fournies par l'environnement Canvas
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
@@ -21,12 +10,31 @@ const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial
 
 function EmailForm() {
   const [email, setEmail] = useState('');
-  const [message, setMessage] = useState(null);
+  const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [db, setDb] = useState(null);
 
+  // Initialisation de Firebase et authentification
   useEffect(() => {
     try {
+      // Récupération de la configuration Firebase à partir des variables d'environnement
+      const firebaseConfig = {
+        apiKey: import.meta.env.VITE_API_KEY,
+        authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+        projectId: import.meta.env.VITE_PROJECT_ID,
+        storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+        messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+        appId: import.meta.env.VITE_APP_ID,
+        measurementId: import.meta.env.VITE_MEASUREMENT_ID
+      };
+
+      // Vérifiez si la configuration est complète avant de lancer l'app
+      if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+        console.error("Erreur: Configuration Firebase incomplète. Veuillez vérifier les variables d'environnement.");
+        setMessage("Erreur de connexion à la base de données. Veuillez réessayer plus tard.");
+        return;
+      }
+
       const app = initializeApp(firebaseConfig);
       const firestore = getFirestore(app);
       setDb(firestore);
@@ -62,17 +70,17 @@ function EmailForm() {
     setIsLoading(true);
 
     try {
-      // Nous utilisons l'email comme identifiant unique du document pour éviter les doublons
-      const emailDocRef = doc(db, `/artifacts/${appId}/public/data/emails`, email);
+      // Créez une référence de document avec l'email comme identifiant unique
+      const docRef = doc(db, `/artifacts/${appId}/public/data/emails`, email);
       
-      await setDoc(emailDocRef, {
+      // Utilisez setDoc pour ajouter ou mettre à jour le document, évitant ainsi les doublons
+      await setDoc(docRef, {
         email: email,
         timestamp: new Date()
       });
-      
+
       setMessage("Merci ! Votre email a bien été enregistré.");
       setEmail('');
-      
     } catch (error) {
       console.error("Erreur d'enregistrement de l'email:", error);
       setMessage("Une erreur est survenue. Veuillez réessayer.");

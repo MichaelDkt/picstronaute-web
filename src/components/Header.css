@@ -1,21 +1,35 @@
 .main-header {
-  background: linear-gradient(180deg, #211134 0%, #7500FF 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   color: var(--picstronaute-white);
-  padding: 20px;
-  text-align: center;
+  padding: 0px 20px;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Nécessaire pour positionner le menu burger */
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.picstronaute-icon {
+  height: 60px;
+  width: auto;
 }
 
 .main-header h1 {
   margin: 0;
-  font-size: 1.8rem;
-  z-index: 1001; /* Pour que le titre reste au-dessus du menu si overlap */
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.main-nav ul {
+.main-header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -23,14 +37,14 @@
   gap: 20px;
 }
 
-.main-nav a {
+.main-header nav a {
   color: var(--picstronaute-white);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.main-nav a:hover {
+.main-header nav a:hover {
   color: var(--picstronaute-green);
 }
 

@@ -10,8 +10,10 @@ function Header() {
 
   return (
     <header className="main-header">
-      <h1>PICSTRONAUTE</h1>
-      
+      <div className="header-title">
+        <img src="./images/picstronaute.png" alt="Picstronaute Icon" className="picstronaute-icon" />
+        <h1>PICSTRONAUTE</h1>
+      </div>     
       {/* Bouton burger visible uniquement sur mobile */}
       <div className="menu-toggle" onClick={toggleMenu}>
         <div className={`burger-line ${isOpen ? 'open' : ''}`}></div>
@@ -24,7 +26,7 @@ function Header() {
         <ul>
           <li><a href="#concept" onClick={toggleMenu}>Concept</a></li>
           <li><a href="#defis" onClick={toggleMenu}>Défis</a></li>
-          <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+          <li><a href="#email" onClick={toggleMenu}>Contact</a></li>
         </ul>
       </nav>
     </header>

@@ -40,7 +40,7 @@ body {
 
 /* Styles des sections */
 section {
-  padding: 60px 20px;
+  padding: 20px 20px;
 }
 
 /* Style de l'en-tête (Header) */
@@ -107,7 +107,7 @@ section {
 .hero-text-column {
   flex: 0.6;
   color: #ffffff;
-  background-color: rgba(117, 0, 255, 0.50);  
+  background-color: rgba(0, 0, 0, 0.2);  
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
@@ -141,31 +141,122 @@ section {
 /* Style de la section des fonctionnalités */
 .features-section {
   background-color: var(--picstronaute-grey);
-  padding: 60px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
 .features-section h3 {
   font-size: 2rem;
   color: var(--picstronaute-purple);
-  margin-bottom: 40px;
 }
 
 .features-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .feature-item {
-  flex: 1 1 250px;
-  max-width: 300px;
+  flex: 1 1 40px;
+  max-width: 400px;
   margin: 20px auto;
-  padding: 40px;
   background-color: #7500FF;
   color: #ffffff;
   border-radius: 20px;
+}
+
+.feature-item-bouger,
+.feature-item-explorer,
+.feature-item-capturer,
+.feature-item-defier {
+  flex: 1 1 200px;
+  max-width: 250px;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  height: 300px;
+  
+  /* Ajout d'une surcouche sombre pour la lisibilité du texte */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligne le H4 en haut et le P en bas */
+  color: var(--picstronaute-white);
+  text-align: left;
+  position: relative; /* Nécessaire pour les superpositions */
+  overflow: hidden; /* Cache le débordement de l'image de fond */
+}
+
+/* Création d'une surcouche pour assombrir l'image de fond */
+.feature-item-bouger::before,
+.feature-item-explorer::before,
+.feature-item-capturer::before,
+.feature-item-defier::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Couleur sombre semi-transparente */
+  border-radius: 20px; /* Assurez-vous que la surcouche a aussi des bords arrondis */
+}
+
+/* Positionne le texte au-dessus de la surcouche */
+.feature-item-bouger h4, .feature-item-bouger p,
+.feature-item-explorer h4, .feature-item-explorer p,
+.feature-item-capturer h4, .feature-item-capturer p,
+.feature-item-defier h4, .feature-item-defier p {
+  position: relative;
+  z-index: 1; /* Assurez-vous que le texte est au-dessus de la surcouche */
+}
+
+.feature-item-bouger h4,
+.feature-item-explorer h4,
+.feature-item-capturer h4,
+.feature-item-defier h4 {
+  font-size: 1.5rem;
+  color: var(--picstronaute-white);
+  margin-top: 0; /* Réinitialise la marge supérieure par défaut */
+  margin-bottom: auto; /* Pousse les h4 vers le haut */
+}
+
+.feature-item-bouger p,
+.feature-item-explorer p,
+.feature-item-capturer p,
+.feature-item-defier p {
+  color: var(--picstronaute-white);
+  padding: 10px 0; /* Ajuste le padding si nécessaire */
+  margin-bottom: 0; /* Réinitialise la marge inférieure par défaut */
+}
+
+/* Styles pour les images de fond spécifiques */
+.feature-item-bouger {
+  background-image: url('/images/bouger.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.feature-item-explorer {
+  background-image: url('/images/explorer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.feature-item-capturer {
+  background-image: url('/images/capturer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.feature-item-defier {
+  background-image: url('/images/defier.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
 }
 
 .feature-item h4 {
@@ -185,28 +276,6 @@ section {
   color: var(--picstronaute-green);
   text-decoration: none;
   font-weight: bold;
-}
-
-/* Style de la section Instagram */
-.instagram-section {
-  padding: 60px 20px;
-}
-
-.instagram-section h3 {
-  font-size: 2rem;
-  color: var(--picstronaute-purple);
-  margin-bottom: 40px;
-}
-
-.instagram-feed-container {
-  width: 100%;
-}
-
-.instagram-feed-container iframe {
-  width: 100%;
-  border: none;
-  overflow: hidden;
-  height: 800px;
 }
 
 /* MEDIA QUERIES POUR MOBILE */
@@ -240,9 +309,5 @@ section {
   
   .features-container {
     flex-direction: column;
-  }
-
-  .instagram-feed-container iframe {
-    height: 400px;
   }
 }

@@ -52,34 +52,34 @@ function LandingPage() {
         
         <div className="challenges-container">
           <div className="challenge-card">
-            <img src="images/Defis/1.png" alt="Défi Bouger" />
+            <img src="images/Defis/1.png" alt="Défi 1" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/2.png" alt="Défi Explorer" />
+            <img src="images/Defis/2.png" alt="Défi 2" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/3.png" alt="Défi Capturer" />
+            <img src="images/Defis/3.png" alt="Défi 3" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/4.png" alt="Défi Bouger" />
+            <img src="images/Defis/4.png" alt="Défi 4" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/5.png" alt="Défi Explorer" />
+            <img src="images/Defis/5.png" alt="Défi 5" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/6.png" alt="Défi Capturer" />
+            <img src="images/Defis/6.png" alt="Défi 6" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/7.png" alt="Défi Capturer" />
+            <img src="images/Defis/7.png" alt="Défi 7" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/8.png" alt="Défi Bouger" />
+            <img src="images/Defis/8.png" alt="Défi 8" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/9.png" alt="Défi Explorer" />
+            <img src="images/Defis/9.png" alt="Défi 9" />
           </div>
           <div className="challenge-card">
-            <img src="images/Defis/10.png" alt="Défi Capturer" />
+            <img src="images/Defis/10.png" alt="Défi 10" />
           </div>
         </div>
         <div className='instagram-button'>

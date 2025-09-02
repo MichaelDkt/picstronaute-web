@@ -39,7 +39,7 @@ body {
 }
 
 /* Styles des sections */
-section {
+.section {
   padding: 20px 20px;
 }
 
@@ -107,9 +107,10 @@ section {
 .hero-text-column {
   flex: 0.6;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.2);  
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);  
+  padding: 40px 0px;
   margin: 20px;
+  margin-top: 60px;
   border-radius: 20px;
 }
 
@@ -148,6 +149,7 @@ section {
 .features-section h3 {
   font-size: 2rem;
   color: var(--picstronaute-purple);
+  margin: 10px;
 }
 
 .features-container {
@@ -159,7 +161,6 @@ section {
 
 .feature-item {
   flex: 1 1 40px;
-  max-width: 400px;
   margin: 20px auto;
   background-color: #7500FF;
   color: #ffffff;
@@ -170,14 +171,11 @@ section {
 .feature-item-explorer,
 .feature-item-capturer,
 .feature-item-defier {
-  flex: 1 1 200px;
-  max-width: 250px;
+  flex: 1 1 300px;
   margin: 20px;
   border-radius: 20px;
   padding: 20px;
   height: 300px;
-  
-  /* Ajout d'une surcouche sombre pour la lisibilité du texte */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Aligne le H4 en haut et le P en bas */
@@ -262,6 +260,48 @@ section {
 .feature-item h4 {
   font-size: 1.5rem;
   color: var(--picstronaute-green);
+}
+
+/* Styles de la nouvelle section "challenges" */
+.feature-challenge {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: var(--picstronaute-white);
+}
+
+.instagram-challenges-section {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.challenges-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 20px;
+}
+
+.challenge-card {
+  display: inline-block;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.challenge-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.instagram-button {
+  margin: 30px 0px;
+}
+
+.cta-button instagram-button {
+  text-align: center;
 }
 
 /* Style du pied de page */

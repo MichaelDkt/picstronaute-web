@@ -1,17 +1,19 @@
 .email-form-container {
   text-align: center;
-  margin-top: 40px;
-  padding-bottom: 20px;
+  padding: 30px;
+  background: linear-gradient(180deg, #7500FF 0%, #211134 100%);
 }
 
 .email-form-container h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #ffffff;
   margin-bottom: 10px;
+  margin: 0px;
+  padding: 10px;
 }
 
 .email-form-container p {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   max-width: 600px;
   margin: 0 auto 40px;
   color: white;

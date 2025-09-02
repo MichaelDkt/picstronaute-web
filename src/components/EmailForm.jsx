@@ -91,7 +91,7 @@ function EmailForm() {
 
   return (
     <div className="email-form-container">
-      <h3>Restez au courant du lancement !</h3>
+      <h3>Tout sur le lancement !</h3>
       <p>Soyez les premiers informés des missions exclusives, des nouvelles fonctionnalités et du lancement de l'application.</p>
       <form onSubmit={handleSubmit} className="cta-form">
         <input 

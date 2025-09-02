@@ -10,9 +10,9 @@ function LandingPage() {
       >
         <div className="hero-content">
           <div className="hero-text-column">
-            <h2>L'Appli qui fait de vos photos de vraies aventures.</h2>
+            <h2>L'Appli qui va faire de vos photos de vraies aventures.</h2>
             <p>Des défis créatifs pour bouger, explorer et capturer le monde autrement.</p>
-            <button className="cta-button">Rejoindre l'aventure</button>
+            <a href="#email" className="cta-button">Rejoindre l'aventure</a>
           </div>
         </div>
       </section>
@@ -42,6 +42,51 @@ function LandingPage() {
       {/*  Section la collect d'email */}
       <section id="email">
          <EmailForm />
+      </section>
+
+
+      {/* SECTION POUR LES DÉFIS INSTAGRAM */}
+      <section id="defis" className='feature-challenge'>
+        <h3>En attendant l'application, participe à nos défis !</h3>
+        <p>Retrouve les derniers challenges photo et partage tes créations sur Instagram avec <a href="https://www.instagram.com/explore/tags/ChallengePicstronaute" target="_blank" rel="noopener noreferrer">#ChallengePicstronaute</a>.</p>
+        
+        <div className="challenges-container">
+          <div className="challenge-card">
+            <img src="images/Defis/1.png" alt="Défi Bouger" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/2.png" alt="Défi Explorer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/3.png" alt="Défi Capturer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/4.png" alt="Défi Bouger" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/5.png" alt="Défi Explorer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/6.png" alt="Défi Capturer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/7.png" alt="Défi Capturer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/8.png" alt="Défi Bouger" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/9.png" alt="Défi Explorer" />
+          </div>
+          <div className="challenge-card">
+            <img src="images/Defis/10.png" alt="Défi Capturer" />
+          </div>
+        </div>
+        <div className='instagram-button'>
+        <a href="https://instagram.com/picstronaute" target="_blank" className="cta-button instagram-button">
+          Voir plus de défis sur Instagram
+        </a>
+        </div>
       </section>
     </>
   );

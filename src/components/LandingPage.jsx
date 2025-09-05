@@ -10,8 +10,8 @@ function LandingPage() {
       >
         <div className="hero-content">
           <div className="hero-text-column">
-            <h2>L'Appli qui va faire de vos photos de vraies aventures.</h2>
-            <p>Des défis créatifs pour bouger, explorer et capturer le monde autrement.</p>
+            <h2>Pour que chaque photo devienne une aventure.</h2>
+            <p>Des défis créatifs pour bouger, explorer et capturer le monde autrement, entre amis ou avec la communauté.</p>
             <a href="#email" className="cta-button">Rejoindre l'aventure</a>
           </div>
         </div>
@@ -31,11 +31,11 @@ function LandingPage() {
          </div>
           <div className="feature-item-capturer">
                 <h4>Capturer</h4>
-                <p>Immortalisez vos aventures. Chaque mission vous invite à explorer votre créativité et à transformer l'instant en image.</p>
+                <p>Immortalisez vos aventures. Avec votre smartphone ou votre reflex, transformer l'instant en image.</p>
          </div>
           <div className="feature-item-defier">
                 <h4>Défier</h4>
-                 <p>Relevez des défis thématiques, grimpez dans le classement et rejoignez une communauté engagée. Chaque photo est une chance de vous dépasser.</p>
+                 <p>Relevez ou créer vos défis, grimpez dans le classement et gagnez les challenges. Chaque photo est une chance de vous dépasser.</p>
          </div>
         </div>
       </section>

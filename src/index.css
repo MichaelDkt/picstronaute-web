@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  background-color: #333; /* Optionnel : pour s'assurer qu'il est lisible */
+}
+
+#page-footer a {
+  color: #7500FF;
+  margin: 0 15px; /* Ajoute un peu d'espace entre les liens */
+  text-decoration: none;
+}
+
+#page-footer a:hover {
+  text-decoration: underline;
+}

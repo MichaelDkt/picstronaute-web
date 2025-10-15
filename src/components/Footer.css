@@ -1,21 +1,29 @@
 .main-footer {
-  background: linear-gradient(180deg, #7500FF 0%, #211134 100%);
-  color: var(--picstronaute-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espace entre les éléments */
   padding: 20px;
-  text-align: center;
+  background-color: #333;
+  color: #ccc;
 }
 
-.main-footer a {
-  color: var(--picstronaute-green);
+.footer-links a {
+  color: #7500FF;
+  margin: 0 10px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.instagram-icon  {
-  height: 40px;
-  width: auto;
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
-.main-footer p {
-  font-size: 1rem;
+.instagram-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 0.9rem;
 }

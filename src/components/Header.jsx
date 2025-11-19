@@ -24,8 +24,8 @@ function Header() {
       {/* Navigation - masquée ou affichée selon l'état du menu */}
       <nav className={`main-nav ${isOpen ? 'open' : ''}`}>
         <ul>
+          <li><a href="#app-en-action" onClick={toggleMenu}>Application</a></li>
           <li><a href="#concept" onClick={toggleMenu}>Concept</a></li>
-          <li><a href="#defis" onClick={toggleMenu}>Défis</a></li>
           <li><a href="#email" onClick={toggleMenu}>Contact</a></li>
         </ul>
       </nav>

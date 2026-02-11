@@ -35,8 +35,8 @@
 }
 
 .cta-form button {
-  background-color: var(--picstronaute-green);
-  color: var(--picstronaute-white);
+  background-color: #29FB06;
+  color: var(--picstronaute-black);
   font-weight: bold;
   padding: 10px 20px;
   border: none;

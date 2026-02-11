@@ -1,6 +1,7 @@
 import React from 'react';
 import EmailForm from './EmailForm';
 
+
 function LandingPage() {
   return (
     <>
@@ -12,7 +13,6 @@ function LandingPage() {
           <div className="hero-text-column">
             <h1>Pour que chaque photo devienne une aventure.</h1>
             <p> L'application mobile qui transforme chaque jour en une aventure photo. Bougez, explorez, et gagnez grâce à vos clichés.</p>
-            <a href="#email" className="cta-button">Rejoindre l'aventure</a>
           </div>
         </div>
       </section>
@@ -65,7 +65,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section>      
 
      {/* Section "Le concept" (id="concept") - PAS DE CHANGEMENT */}
       <section id="concept" className="features-section">

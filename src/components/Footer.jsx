@@ -5,13 +5,20 @@ function Footer() {
   return (
     <footer className="main-footer">
       <div className="footer-links">
-        <a href="/privacy.html">Politique de Confidentialité</a>
-        <a href="/conditions.html">Conditions d'Utilisation</a>
+        <a target="_blank" href="/privacy.html">Politique de Confidentialité</a>
+        <a target="_blank" href="/conditions.html">Conditions d'Utilisation</a>
       </div>
-      <a href="https://instagram.com/picstronaute" target="_blank" rel="noopener noreferrer">
-        <img src="./images/logo-instagram.png" alt="Instagram Icon" className="instagram-icon" />
-      </a>
-      <p className="footer-copyright">© 2025 Picstronaute</p>
+
+      <div className="footer-socials">
+        <a href="https://instagram.com/picstronaute" target="_blank" rel="noopener noreferrer">
+          <img src="./images/logo-instagram.png" alt="Instagram Icon" className="social-icon" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61552903802924" target="_blank" rel="noopener noreferrer">
+          <img src="./images/logo-facebook.png" alt="Facebook Icon" className="social-icon" />
+        </a>
+      </div>
+
+      <p className="footer-copyright">© 2026 Picstronaute</p>
     </footer>
   );
 }

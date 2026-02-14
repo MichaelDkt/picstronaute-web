@@ -7,13 +7,13 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDmeVjMhcEwjWTHTyXRGLk9Q-nGx350KYo",
-  authDomain: "picstronaute-v2.firebaseapp.com",
-  projectId: "picstronaute-v2",
-  storageBucket: "picstronaute-v2.firebasestorage.app",
-  messagingSenderId: "980624999287",
-  appId: "1:980624999287:web:b8da060d2215ed32e45772",
-  measurementId: "G-282D0Q2VDV"
+  apiKey: import.meta.env.VITE_API_KEY_WEB,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN_WEB,
+  projectId: import.meta.env.VITE_PROJECT_ID_WEB,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET_WEB,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID_WEB,
+  appId: import.meta.env.VITE_APP_ID_WEB,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID_WEB
 };
 
 const app = initializeApp(firebaseConfig);
